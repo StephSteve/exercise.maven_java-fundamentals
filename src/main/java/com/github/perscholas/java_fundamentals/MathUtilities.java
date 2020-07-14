@@ -90,9 +90,9 @@ public class MathUtilities {
      * @param difference value to subtract from starting value
      * @return difference between `baseValue` and `difference`
      */
-    public int subtract(short baseValue, short difference) {
+    public Short subtract(short baseValue, short difference) {
 
-        return baseValue-difference;
+        return (short) (baseValue - difference);
     }
 
     /**
