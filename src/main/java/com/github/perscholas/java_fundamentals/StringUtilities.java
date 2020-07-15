@@ -41,7 +41,7 @@ public class StringUtilities {
      */
     public static String getPrefix(String input){
         input = "Hello";
-        return input.;
+        return input.substring(0,3);
     }
 
     /**
@@ -49,7 +49,9 @@ public class StringUtilities {
      * @return the last 3 characters of `input`
      */
     public static String getSuffix(String input){
-        return null;
+
+        input = "Hello";
+        return input.substring(2, 5);
     }
 
     /**
@@ -58,7 +60,13 @@ public class StringUtilities {
      * @return the equivalence of two strings, `inputValue` and `comparableValue`
      */
     public static Boolean compareTwoStrings(String inputValue, String comparableValue){
-        return null;
+        int newValue = inputValue.compareTo(comparableValue);
+        if (newValue == 0)
+            return (true);
+        else
+            return (false);
+
+
     }
 
     /**
