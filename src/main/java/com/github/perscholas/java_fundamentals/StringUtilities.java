@@ -13,22 +13,22 @@ public class StringUtilities {
     }
 
     /**
-     * @param firstSegment a string to be added to
+     * @param firstSegment  a string to be added to
      * @param secondSegment a string to add
      * @return the concatenation of two strings, `firstSegment`, and `secondSegment`
      */
-    public static String concatenation(String firstSegment, String secondSegment){
-         firstSegment = "Hello";
-         secondSegment = "Java";
-         return firstSegment + " " + secondSegment;
+    public static String concatenation(String firstSegment, String secondSegment) {
+        firstSegment = "Hello";
+        secondSegment = "Java";
+        return firstSegment + " " + secondSegment;
     }
 
     /**
-     * @param firstSegment a string to be added to
+     * @param firstSegment  a string to be added to
      * @param secondSegment a string to add
      * @return the concatenation of an integer, `firstSegment`, and a String, `secondSegment`
      */
-    public static String concatenation(int firstSegment, String secondSegment){
+    public static String concatenation(int firstSegment, String secondSegment) {
         firstSegment = 1;
         secondSegment = "Java";
 
@@ -39,33 +39,28 @@ public class StringUtilities {
      * @param input a string to be manipulated
      * @return the first 3 characters of `input`
      */
-    public static String getPrefix(String input){
+    public static String getPrefix(String input) {
         input = "Hello";
-        return input.substring(0,3);
+        return input.substring(0, 3);
     }
 
     /**
      * @param input a string to be manipulated
      * @return the last 3 characters of `input`
      */
-    public static String getSuffix(String input){
+    public static String getSuffix(String input) {
 
         input = "Hello";
         return input.substring(2, 5);
     }
 
     /**
-     * @param inputValue the value to be compared
+     * @param inputValue      the value to be compared
      * @param comparableValue the value to be compared against
      * @return the equivalence of two strings, `inputValue` and `comparableValue`
      */
-    public static Boolean compareTwoStrings(String inputValue, String comparableValue){
-        int newValue = inputValue.compareTo(comparableValue);
-        if (newValue == 0)
-            return (true);
-        else
-            return (false);
-
+    public static Boolean compareTwoStrings(String inputValue, String comparableValue) {
+        return inputValue.equals(comparableValue);
 
     }
 
@@ -73,31 +68,39 @@ public class StringUtilities {
      * @param inputValue the value input from user
      * @return the middle character of `inputValue`
      */
-    public static Character getMiddleCharacter(String inputValue){
-        return null;
+    public static Character getMiddleCharacter(String inputValue) {
+        return inputValue.charAt(3);
+        /*char[] newChar = inputValue.toCharArray();
+        char middleC = newChar[(newChar.length-5)];
+        return middleC;*/
     }
 
     /**
      * @param spaceDelimitedString a string, representative of a sentence, containing spaces
      * @return the first sequence of characters
      */
-    public static String getFirstWord(String spaceDelimitedString){
-        return null;
+    public static String getFirstWord(String spaceDelimitedString) {
+        String[] firstWord = spaceDelimitedString.split("\\s");
+        return firstWord[0];
     }
 
     /**
      * @param spaceDelimitedString a string delimited by spaces
      * @return the second word of a string delimited by spaces.
      */
-    public static String getSecondWord(String spaceDelimitedString){
-        return null;
+    public static String getSecondWord(String spaceDelimitedString) {
+        String[] secondWord = spaceDelimitedString.split("\\s");
+        return secondWord[1];
     }
 
     /**
      * @param stringToReverse
      * @return an identical string with characters in reverse order.
      */
-    public static String reverse(String stringToReverse){
-        return null;
+    public static String reverse(String stringToReverse) {
+
+        return new StringBuilder(stringToReverse).reverse().toString();
+
+
     }
 }
